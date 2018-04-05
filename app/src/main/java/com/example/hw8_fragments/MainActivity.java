@@ -5,13 +5,26 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements ListFragment.Callback {
+
+    private LinearLayout itemLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager
+                .beginTransaction();
+
+        // добавляем фрагмент
+        ListFragment myFragment = new ListFragment();
+        fragmentTransaction.add(R.id.container, myFragment);
+        fragmentTransaction.commit();
+
     }
 
     @Override
@@ -19,13 +32,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Call
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-        if (isFirstFragmentShowing) {
-            isFirstFragmentShowing = false;
-            transaction.replace(R.id.am_content_container, new BlankFragment());
-        } else {
-            isFirstFragmentShowing = true;
-            transaction.replace(R.id.am_content_container, new SecondFragment());
-        }
+        itemLayout = findViewById(R.id.i_item_all_ll);
+        itemLayout.setOnClickListener(view1 -> {
+            transaction.replace(R.id.container, new ItemFragment());
+        });
 
         transaction.commit();
     }
