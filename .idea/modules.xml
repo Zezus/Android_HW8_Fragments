@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HW8_Fragments.iml" filepath="$PROJECT_DIR$/.idea/HW8_Fragments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW8_Fragments.iml" filepath="$PROJECT_DIR$/HW8_Fragments.iml" />
       <module fileurl="file://D:\Android\Home_Work\HW8_Fragments\HW8_Fragments.iml" filepath="D:\Android\Home_Work\HW8_Fragments\HW8_Fragments.iml" />
+      <module fileurl="file://C:\AndroidProject\HW8_Fragments\.idea\HW8_Fragments.iml" filepath="C:\AndroidProject\HW8_Fragments\.idea\HW8_Fragments.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://D:\Android\Home_Work\HW8_Fragments\app\app.iml" filepath="D:\Android\Home_Work\HW8_Fragments\app\app.iml" />
     </modules>

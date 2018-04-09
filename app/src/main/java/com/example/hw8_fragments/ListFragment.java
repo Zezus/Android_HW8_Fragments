@@ -6,12 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -42,16 +38,14 @@ public class ListFragment extends Fragment {
 
         init();
 
-        itemRecyclerView.setAdapter(new ItemAdapter(getContext(), items));
+        itemRecyclerView.setAdapter(new ItemAdapter(getContext(), items, (MainActivity) getActivity()));
 
 
-        relativeLayout = view.findViewById(R.id.fl_items_rv);
-
-
+        /*relativeLayout = view.findViewById(R.id.fl_items_rv);
 
         relativeLayout.setOnClickListener(view1 -> {
             ((Callback) getActivity()).changeFragmentClicked(null);
-        });
+        });*/
         return view;
 
     }
