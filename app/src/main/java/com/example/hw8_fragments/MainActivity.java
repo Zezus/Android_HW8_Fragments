@@ -5,11 +5,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity implements ListFragment.Callback {
 
-    private LinearLayout itemLayout;
+    private RelativeLayout itemLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +34,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Call
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-        itemLayout = findViewById(R.id.i_item_all_ll);
-        itemLayout.setOnClickListener(view1 -> {
-            transaction.replace(R.id.container, new ItemFragment());
-        });
+        transaction.replace(R.id.container, new ItemFragment());
 
         transaction.commit();
     }
+
 }

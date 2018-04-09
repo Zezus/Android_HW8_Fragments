@@ -6,8 +6,12 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -20,6 +24,7 @@ public class ListFragment extends Fragment {
 
     private RecyclerView itemRecyclerView;
     private ArrayList<Item> items;
+    private  RecyclerView relativeLayout;
 
     public ListFragment() {
         // Required empty public constructor
@@ -31,12 +36,22 @@ public class ListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list, container, false);
+        View view2 = inflater.inflate(R.layout.item, container, false);
         itemRecyclerView = view.findViewById(R.id.fl_items_rv);
         itemRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         init();
 
         itemRecyclerView.setAdapter(new ItemAdapter(getContext(), items));
+
+
+        relativeLayout = view.findViewById(R.id.fl_items_rv);
+
+
+
+        relativeLayout.setOnClickListener(view1 -> {
+            ((Callback) getActivity()).changeFragmentClicked(null);
+        });
         return view;
 
     }
@@ -63,5 +78,7 @@ public class ListFragment extends Fragment {
     public interface Callback {
         void changeFragmentClicked(View view);
     }
+
+
 
 }
