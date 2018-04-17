@@ -70,7 +70,7 @@ public class ListFragment extends Fragment {
 
 
     public interface Callback {
-        void changeFragmentClicked(View view);
+        void changeFragmentClicked(View view, Item item);
     }
 
 

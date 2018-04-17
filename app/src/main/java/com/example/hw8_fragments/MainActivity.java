@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Call
 
     }
 
-    @Override
+   /* @Override
     public void changeFragmentClicked(View view) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -37,6 +37,20 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Call
         transaction.replace(R.id.container, new ItemFragment());
         transaction.addToBackStack("list");
         transaction.commit();
-    }
+    }*/
 
+    @Override
+    public void changeFragmentClicked(View view, Item item) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        ItemFragment itemFragment = new ItemFragment();
+        Bundle args = new Bundle();
+        args.putParcelable("item", item);
+        itemFragment.setArguments(args);
+
+
+        transaction.replace(R.id.container, itemFragment);
+        transaction.addToBackStack("list");
+        transaction.commit();
+    }
 }

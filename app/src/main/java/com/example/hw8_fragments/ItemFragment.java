@@ -35,6 +35,13 @@ public class ItemFragment extends Fragment {
             getFragmentManager().popBackStack();
         });
 
+        Item item = getArguments().getParcelable("item");
+        button_back.setText(item.getName());
+
+
+
+
+
         return view;
     }
 
