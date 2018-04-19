@@ -20,7 +20,6 @@ public class ListFragment extends Fragment {
 
     private RecyclerView itemRecyclerView;
     private ArrayList<Item> items;
-    private  RecyclerView relativeLayout;
 
     public ListFragment() {
         // Required empty public constructor
@@ -32,7 +31,6 @@ public class ListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list, container, false);
-        View view2 = inflater.inflate(R.layout.item, container, false);
         itemRecyclerView = view.findViewById(R.id.fl_items_rv);
         itemRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -40,12 +38,6 @@ public class ListFragment extends Fragment {
 
         itemRecyclerView.setAdapter(new ItemAdapter(getContext(), items, (MainActivity) getActivity()));
 
-
-        /*relativeLayout = view.findViewById(R.id.fl_items_rv);
-
-        relativeLayout.setOnClickListener(view1 -> {
-            ((Callback) getActivity()).changeFragmentClicked(null);
-        });*/
         return view;
 
     }

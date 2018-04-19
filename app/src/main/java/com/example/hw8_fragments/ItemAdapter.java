@@ -38,10 +38,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         dialog = new Dialog(context);
         dialog.setContentView(R.layout.fragment_item);
 
-
-
-
-
         return new ViewHolder(view);
     }
 
@@ -55,13 +51,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         holder.coastTV.setText(String.valueOf(item.getCoast()));
 
         holder.relativeLayout.setOnClickListener(view1 -> {
-//            TextView item_name = dialog.findViewById(R.id.fi_name_tv);
-//            TextView item_title = dialog.findViewById(R.id.fi_title_tv);
-//            TextView item_coast = dialog.findViewById(R.id.fi_coast_tv);
-//
-//            item_name.setText(itemList.get(viewHolder.getAdapterPosition()).getName());
-//            item_title.setText(itemList.get(viewHolder.getAdapterPosition()).getTitle());
-//            item_coast.setText(String.valueOf(itemList.get(viewHolder.getAdapterPosition()).getCoast()));
             mainActivity.changeFragmentClicked(null, item);
         });
     }
