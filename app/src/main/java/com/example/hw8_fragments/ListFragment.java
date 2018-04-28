@@ -46,14 +46,14 @@ public class ListFragment extends Fragment {
         Item item1 = new Item();
         item1.setId(UUID.randomUUID());
         item1.setName("Meizu m3 Note");
-        item1.setTitle("16 gb  ");
-        item1.setCoast(100);
+        item1.setTitle("16 gbxxx xxxxx xxxxxxxxx xxxxxxx xxxxxxxx xxxxxx xxxxxxxxxxxx xxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxx  ");
+        item1.setCoast("100 $");
 
         Item item2 = new Item();
         item2.setId(UUID.randomUUID());
         item2.setName("iPhone X");
-        item2.setTitle("256 gb  ");
-        item2.setCoast(1000);
+        item2.setTitle("256 gbxxxxxxxxxxxxxx xxxxxxxxx xxxxxxx xxxxxxxxxx xxxxxxxxx xxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx  ");
+        item2.setCoast("1000 $");
 
         items = new ArrayList<>();
         items.add(item1);

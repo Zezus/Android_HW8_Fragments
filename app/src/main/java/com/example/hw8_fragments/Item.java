@@ -26,7 +26,7 @@ public class Item implements Parcelable {
     private UUID id;
     private String name;
     private String title;
-    private float coast;
+    private String coast;
 
     public Item() {
     }
@@ -37,7 +37,7 @@ public class Item implements Parcelable {
         data[0] = id.toString();
         data[1] = name;
         data[2] = title;
-        data[3] = String.valueOf(coast);
+        data[3] = coast;
     }
 
     public UUID getId() {
@@ -64,11 +64,11 @@ public class Item implements Parcelable {
         this.title = title;
     }
 
-    public float getCoast() {
+    public String getCoast() {
         return coast;
     }
 
-    public void setCoast(float coast) {
+    public void setCoast(String coast) {
         this.coast = coast;
     }
 
