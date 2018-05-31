@@ -1,15 +1,14 @@
 package com.example.hw8_fragments;
 
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -21,6 +20,7 @@ public class ItemFragment extends Fragment {
     private TextView nameTV;
     private TextView coastTV;
     private TextView titleTV;
+    private ImageView imageV;
 
     private ViewGroup container;
     private LayoutInflater  inflater;
@@ -40,6 +40,7 @@ public class ItemFragment extends Fragment {
         nameTV = view.findViewById(R.id.fi_name_tv);
         coastTV = view.findViewById(R.id.fi_coast_tv);
         titleTV = view.findViewById(R.id.fi_title_tv);
+        imageV = view.findViewById(R.id.i_image_iv);
 
         button_back.setOnClickListener(view1 -> {
             getFragmentManager().popBackStack();
@@ -49,6 +50,7 @@ public class ItemFragment extends Fragment {
         nameTV.setText(item.getName());
         coastTV.setText(item.getCoast());
         titleTV.setText(item.getTitle());
+        imageV.setImageResource(item.getPhoto());
 
 //        this.container = container;
 //        this.inflater = inflater;

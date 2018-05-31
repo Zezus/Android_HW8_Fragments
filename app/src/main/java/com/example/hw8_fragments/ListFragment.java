@@ -46,14 +46,17 @@ public class ListFragment extends Fragment {
         Item item1 = new Item();
         item1.setId(UUID.randomUUID());
         item1.setName("Meizu m3 Note");
-        item1.setTitle("16 gbxxx xxxxx xxxxxxxxx xxxxxxx xxxxxxxx xxxxxx xxxxxxxxxxxx xxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxx  ");
+        item1.setTitle("Экран 5.5\" (1920x1080), сенсорный | Восьмиядерный процессор | Оперативная память 3 ГБ | Встроенная память 32 ГБ + microSD до 256 ГБ | Камера 13 Мп + фронтальная 5 Мп | Батарея 4100 мАч | Android 5.1 | Bluetooth 4.2 | Wi-Fi 802.11 b/g/n/ac | 153,6 x 75,5 x 8,2 мм, 163 г | Серый  ");
         item1.setCoast("100 $");
+        item1.setPhoto(R.drawable.meizu);
 
         Item item2 = new Item();
         item2.setId(UUID.randomUUID());
         item2.setName("iPhone X");
-        item2.setTitle("256 gbxxxxxxxxxxxxxx xxxxxxxxx xxxxxxx xxxxxxxxxx xxxxxxxxx xxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx  ");
+        item2.setTitle("Экран 5.8\" Super Retina HD (1125x2436), сенсорный | Стандарт защиты: IP67 | Оперативная память 3 ГБ | Встроенная память 64 ГБ | Камера 12+12 Мп + фронтальная 7 Мп | Батарея 2716 мАч | iOS 11 | Bluetooth | Wi-Fi | NFC | Поддержка 4G | 143.6 x 70.9 x 7.7 мм, 174 гр | Серебристый  ");
         item2.setCoast("1000 $");
+        item2.setPhoto(R.drawable.iphone);
+
 
         items = new ArrayList<>();
         items.add(item1);

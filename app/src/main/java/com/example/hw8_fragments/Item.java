@@ -27,17 +27,20 @@ public class Item implements Parcelable {
     private String name;
     private String title;
     private String coast;
+    private int photo;
+
 
     public Item() {
     }
 
     public Item(Parcel in) {
-        String[] data = new String[4];
+        String[] data = new String[5];
         in.readStringArray(data);
         data[0] = id.toString();
         data[1] = name;
         data[2] = title;
         data[3] = coast;
+        data[4] = String.valueOf(photo);
     }
 
     public UUID getId() {
@@ -72,6 +75,15 @@ public class Item implements Parcelable {
         this.coast = coast;
     }
 
+    public int getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(int photo) {
+        this.photo = photo;
+    }
+
+
     @Override
     public int describeContents() {
         return 0;
@@ -79,6 +91,6 @@ public class Item implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeStringArray(new String[]{id.toString(), name, title, String.valueOf(coast)});
+        parcel.writeStringArray(new String[]{id.toString(), name, title, String.valueOf(coast), String.valueOf(photo)});
     }
 }
